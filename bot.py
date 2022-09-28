@@ -23,6 +23,7 @@ def send_welcome(message):
 @bot.message_handler(content_types=['text'])
 def homework_append(message):
     if message.text == 'Отправить задание':
+        bot.reply_to(message, "Задание успешно отправлено, ожидайте ответа!")
         forwardingMessage(homework_array, message, homework_images)
         homework_array.clear()
         homework_images.clear()
